@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Page</title>
+    <script language="JavaScript">
+    function startValue() {
+        nextPicName = "image1.jpg"; // Start with the first image
+    }
+
+    function imageSwitch() {
+        var img = document.getElementById("mainImage");
+        if (nextPicName === "image1.jpg") {
+            nextPicName = "image2.jpg";
+            img.src = nextPicName;
+        } else if (nextPicName === "image2.jpg") {
+            nextPicName = "image3.jpg";
+            img.src = nextPicName;
+        } else if (nextPicName === "image3.jpg") {
+            nextPicName = "image1.jpg";
+            img.src = nextPicName;
+        }
+    }
+    </script>
+</head>
+<body onload="startValue()">
+    <h1>This is an H1 heading</h1>
+    <p>This text is <strong>IMPORTANT</strong> and this text is <em>emphasized</em></p>
+    <p>Below is a bulleted list:</p>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <p>Here is a link to another Web page, <a href="http://PBS.org">PBS</a></p>
+    <p>And here is an image:</p>
+    <img src="image1.jpg" id="mainImage" alt="Random Images on my computer"
+         onMouseOver="imageSwitch()" onMouseOut="imageSwitch()">
+</body>
+</html>
