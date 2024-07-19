@@ -23,7 +23,7 @@ def print_cost_report(car, base_price, fees):
     print(f"{'Total Cost:':<30}${total_cost:,.2f}")
 
 def main():
-    print("Welcome to Waldo Wonderful Wrecks, LLC")
+    print("Welcome to Group 4 StealershipSUV, LLC")
     
     car = input("\nWhich car are you interested in? ")
     base_price = float(input(f"\nHow much will you give us for the {car}? "))
