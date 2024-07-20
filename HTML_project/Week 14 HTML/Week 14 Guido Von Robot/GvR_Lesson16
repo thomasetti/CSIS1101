@@ -1,0 +1,21 @@
+# Main Program
+find_lunchbox()
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def move_to_next_position():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
+
+def find_lunchbox():
+    while not next_to_a_beeper():
+        move_to_next_position()
+    pick_beeper()
